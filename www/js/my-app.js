@@ -611,7 +611,7 @@ function ofertas(idCategoria){
     }  
 
     myApp.showIndicator();
-    $('#ofertas-cont').html("");
+    $('#ofertashome-cont').html("");
 
         $.ajax({
             url: $server+"Gerar_json.php?idCategoria="+localStorage.getItem("idCategoria")+"&idCidade=1&op=oferta",
@@ -666,17 +666,17 @@ function ofertas(idCategoria){
                         imgOferta = "";
                     }
 
-                    $('#ofertas-cont').html(dataOferta);
+                    $('#ofertashome-cont').html(dataOferta);
                     myApp.initImagesLazyLoad(".page");
                 myApp.hideIndicator();
                 }else{
                     myApp.hideIndicator();
-                    $('#ofertas-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
+                    $('#ofertashome-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
                 }
             }
              ,error:function(data){
                 myApp.hideIndicator();
-                $('#ofertas-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
+                $('#ofertashome-cont').html("<li class='semregistro'>Nenhum registro cadastrado</li>");
                 //myApp.alert('Erro! Tente novamente.', 'Aptohome');
              }
         });
@@ -1370,7 +1370,7 @@ if (!opcoes) {
 
                         $('.speed-dial-buttons .fone').attr('onclick','window.open(\"tel:'+data.oferta[i].EmpresaTel+'\")');
                         $('.speed-dial-buttons .ir').attr('onclick','window.open(\"https://www.google.com/maps/search/?api=1&query='+data.oferta[i].EmpresaEndereco+','+data.oferta[i].EmpresaNumero+','+data.oferta[i].EmpresaBairro+','+data.oferta[i].EmpresaCidade+','+data.oferta[i].EmpresaEstado+'\","_system")');
-                        $('.speed-dial-buttons .share').attr('onclick','window.open(\"mailto:'+data.oferta[i].Empresa_email+'\")');
+                        $('.speed-dial-buttons .share').attr('onclick','window.open(\"mailto:'+data.oferta[i].Empresa_email+'\","_system")');
                         $('.local-map a').attr('onclick','window.open(\"https://www.google.com/maps/search/?api=1&query='+data.oferta[i].Latitude+','+data.oferta[i].Longitude+'\","_system")');
 
                         $$('.nameofertascont').html(data.oferta[i].EmpresaNome);
@@ -1378,7 +1378,7 @@ if (!opcoes) {
                         
                         var baixarCupom = '<a href="#" id="baixarCupom" onClick="baixarCupom('+data.oferta[i].Id+')" class="button-action button button-big button-fill button-raised color-green"><i class="fa fa-download"></i> SALVAR CUPOM</a>';
                         var usarCupom = "";
-                        $('.button-cupom').html(baixarCupom);
+                        //$('.button-cupom').html(baixarCupom);
 
                         /*if (localStorage.getItem("userID")) {
 
@@ -1725,9 +1725,9 @@ console.log("dia = "+dia);
                             //console.log("dataini = "+dataini+" dia = "+dia);
                             dataespaco += '<li data-index="'+i+'">'+
                                                 '<a href="#agendacont" onclick="agendacont(\''+imageAgendaArq+'\',\''+data.items[i].summary+'\',\''+descricao+'\',\''+dataBr+'\')" class="item-content item-link">'+
-                                                    '<div class="item-media">'+
-                                                      imageAgenda+
-                                                    '</div>'+
+                                                    //'<div class="item-media">'+
+                                                      //imageAgenda+
+                                                    //'</div>'+
                                                     '<div class="item-inner">'+
                                                         '<div class="item-title-row">'+
                                                             '<div class="item-title title-agenda">'+data.items[i].summary+'</div>'+
@@ -1781,10 +1781,10 @@ function agendacont(imageAgendaArq,titulo,descricao,date) {
             });
 
             imgZoom = "onclick=myPhotoBrowserAgendacont.open();";
-            agendacontimg = '<div id="thumbPostCont">'+
+            /*agendacontimg = '<div id="thumbPostCont">'+
                                 '<i '+imgZoom+' class="fa fa-search-plus fa-3x"></i>'+
                                 '<img src="' + imageAgenda + '" '+imgZoom+'>'+
-                            '</div>';
+                            '</div>';*/
         }
 
         agendacontcont += agendacontimg+
