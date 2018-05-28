@@ -2243,7 +2243,7 @@ function onDeviceReady() {
 
     getLocation();
 
-    var push = PushNotification.init({
+    /*var push = PushNotification.init({
         android: {
             senderID: "214666097431",
         },
@@ -2297,7 +2297,7 @@ function onDeviceReady() {
     push.on('error', function(e) {
         console.log(e.message);
         //$('#push').html(e.message);
-    });
+    });*/
 }
 
 
