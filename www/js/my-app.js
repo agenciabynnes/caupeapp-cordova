@@ -1371,7 +1371,7 @@ if (!opcoes) {
                         $('.speed-dial-buttons .fone').attr('onclick','window.open(\"tel:'+data.oferta[i].EmpresaTel+'\")');
                         $('.speed-dial-buttons .ir').attr('onclick','window.open(\"https://www.google.com/maps/search/?api=1&query='+data.oferta[i].EmpresaEndereco+','+data.oferta[i].EmpresaNumero+','+data.oferta[i].EmpresaBairro+','+data.oferta[i].EmpresaCidade+','+data.oferta[i].EmpresaEstado+'\","_system")');
                         $('.speed-dial-buttons .share').attr('onclick','window.open(\"mailto:'+data.oferta[i].Empresa_email+'\","_system")');
-                        $('.local-map a').attr('onclick','window.open(\"https://www.google.com/maps/search/?api=1&query='+data.oferta[i].Latitude+','+data.oferta[i].Longitude+'\","_system")');
+                        $('.local-map a').attr('onclick','window.open(\"https://www.google.com/maps/search/?api=1&query='+data.oferta[i].EmpresaEndereco+','+data.oferta[i].EmpresaNumero+','+data.oferta[i].EmpresaBairro+','+data.oferta[i].EmpresaCidade+','+data.oferta[i].EmpresaEstado+'\","_system")');
 
                         $$('.nameofertascont').html(data.oferta[i].EmpresaNome);
                         myApp.initImagesLazyLoad(".page");
