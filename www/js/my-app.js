@@ -2236,7 +2236,7 @@ function ofertasMaps(){
 
 
         
-/////////////////////////// push ///////////////////////////
+/////////////////////////// push ////////////////////////////
 
 document.addEventListener('app.Ready', onDeviceReady, true);
 function onDeviceReady() {
