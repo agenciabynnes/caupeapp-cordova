@@ -12,7 +12,7 @@
 <allow-intent href="*" />
 
 <preference name="phonegap-version" value="cli-6.2.0" />
-<plugin name="cordova-plugin-crosswalk-webview" spec="^2.4.0">
+<plugin name="cordova-plugin-crosswalk-webview" spec="^1.8.0">
 <preference name="xwalkVersion" value="18+"/>
 <preference name="xwalkMultipleApk" value="true"/>
 <preference name="xwalkMode" value="lite" />
