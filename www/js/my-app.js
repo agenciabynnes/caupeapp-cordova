@@ -1605,7 +1605,7 @@ console.log("dia = "+dia);
     $$('#calendar-inline-container div span').removeClass("marcado");
 
         var API_KEY = 'AIzaSyAB8ZuJzAX2m3xRhNhXFu9b654LvOgPOHg';
-        var CALENDAR_ID = 'johnnysonaraujo@gmail.com';
+        var CALENDAR_ID = 'caupeapp@gmail.com';
 
         /** current date object */
         var now = new Date();
