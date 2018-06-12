@@ -2145,7 +2145,6 @@ myApp.onPageReinit('maps', function (page) {
 var map;
 
 function maps(){
-    getLocation();
     ofertasListMap = [];
     ofertasMap = [];
 
@@ -2243,6 +2242,7 @@ function ofertasMaps(){
 document.addEventListener('app.Ready', onDeviceReady, true);
 function onDeviceReady() {
     //navigator.splashscreen.show();
+    setTimeout("getLocation()",2000);
 
     /*var push = PushNotification.init({
         android: {
