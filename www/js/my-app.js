@@ -2240,7 +2240,7 @@ function ofertasMaps(){
 
 document.addEventListener('app.Ready', onDeviceReady, true);
 function onDeviceReady() {
-    navigator.splashscreen.show();
+    //navigator.splashscreen.show();
     getLocation();
 
     /*var push = PushNotification.init({
