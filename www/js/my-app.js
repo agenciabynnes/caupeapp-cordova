@@ -132,6 +132,7 @@ function tabenter(event,campo){
 
 ///////////////////////// auto focus ///////////////////////////////
   if (myApp.device.android) {
+    $(".sair").show();
     var getPos = function (obj) {
       var left, top;
       left = top = 0;

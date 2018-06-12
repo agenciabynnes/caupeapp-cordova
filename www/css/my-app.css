@@ -920,7 +920,6 @@ width: calc(50% - 20px);
 
 .list li a{
 	padding-left: 10px;
-	display: block;
 }
 
 .list li a i{
@@ -1464,4 +1463,9 @@ color: #fff;
 	height: 27.273%; /* 3px / 13px */
 	top: 92.308%; /* 12px / 13px */
 	left: 33.333%; /* 4px / 16px */
+}
+
+
+.sair{
+	display: none;
 }
