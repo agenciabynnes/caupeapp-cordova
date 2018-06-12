@@ -28,7 +28,6 @@
     <access origin="https://*.googleusercontent.com"/>
     <access origin="https://*.youtube.com"/>
     <access origin="https://*.youtube.com.br"/>
-    <access origin="https://*.isolver.com.br"/>
     <access origin="tel:*" launch-external="yes" />
     <access origin="geo:*" launch-external="yes" />
     <access origin="mailto:*" launch-external="yes" />
@@ -56,7 +55,6 @@
     <access origin="https://*.googleusercontent.com"/>
     <access origin="https://*.youtube.com"/>
     <access origin="https://*.youtube.com.br"/>
-    <access origin="https://*.isolver.com.br"/>
     <access origin="tel:*" launch-external="yes" />
     <access origin="geo:*" launch-external="yes" />
     <access origin="mailto:*" launch-external="yes" />
