@@ -86,7 +86,6 @@
 <preference  name="FadeSplashScreen" value="true"/>
 <preference  name="FadeSplashScreenDuration" value="0"/>
 <preference  name="ShowSplashScreenSpinner" value="false"/>
-<preference name="StatusBarBackgroundColor" value="#009688"/>
 <preference  name="SplashMaintainAspectRatio" value="true"/>
 <preference  name="DisallowOverscroll" value="true"/>
 <preference  name="UIWebViewBounce" value="false"/>
@@ -95,6 +94,7 @@
 <preference  name="xwalkCommandLine" value="--disable-pull-to-refresh-effect --ignore-gpu-blacklist"/>
 <preference name="xwalkMode" value="embedded"/>
 <preference name="xwalkMultipleApk" value="true"/>
+<preference name="debuggable" value="true"/>
 <platform name="android" >
     <preference name="android-minSdkVersion" value="16"/>
     <preference name="android-targetSdkVersion" value="21"/>
@@ -108,6 +108,9 @@
     <preference name="ios-configuration" value="developer"/>
     <preference name="deployment-target" value="8.0"/>
     <preference name="Orientation" value="all"/>
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <preference name="StatusBarStyle" value="lightcontent" />
 </platform>
 <splash platform="android" src="package-assets/splash-android-320-426.png" density="ldpi" width="320" height="426" orientation="portrait"/>
 <splash platform="android" src="package-assets/splash-android-320-470.png" density="mdpi" width="320" height="470" orientation="portrait"/>
