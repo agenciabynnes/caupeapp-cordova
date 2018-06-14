@@ -2003,6 +2003,8 @@ function noticias() {
 
                 if (data.posts[i].thumbnail_images) {
                     imgNoticias = '<div class="card-content"><img src="'+data.posts[i].thumbnail_images["medium"]["url"]+'" width="100%"></div>';
+                }else{
+                    imgNoticias = '<div class="card-content"><img src="images/sem_foto_cont.jpg" width="100%"></div>';
                 }
                 dataNoticias += '<li>'+
                                     '<a href="#noticiascont" onclick="noticiascont('+data.posts[i].id+');" class="item-link">'+
@@ -2027,6 +2029,7 @@ function noticias() {
 }
  /* exibe noticias */ 
 function noticiascont(id) {
+    myApp.showIndicator();
     $(".noticiascont-cont").empty();
     var url = $serverCau + "?json=get_post&post_id=" + id;
     url+= "&data=" + new Date().getTime();
@@ -2065,10 +2068,7 @@ function noticiascont(id) {
             '<div id="postCont">' + data.post.content + '</div></div>';
 
             $(".noticiascont-cont").html(noticiascontcont);
-
-            $$(".sharePostCont").click(function() {
-                window.plugins.socialsharing.share(null, null, null, data.post.url);
-            });
+            myApp.hideIndicator();
 
     });
     
@@ -2106,11 +2106,13 @@ function instagram(){
 
 }
 function myCallbackFunc(argument) {
-    console.log("sai");
+    
     setTimeout(function () {
         $("#fotos-cont li a").addClass("link external");
+        console.log("sai");
+        myApp.hideIndicator();
     }, 3000);
-    myApp.hideIndicator();
+    
 }
 
 /*

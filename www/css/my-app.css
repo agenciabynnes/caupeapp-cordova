@@ -920,6 +920,7 @@ width: calc(50% - 20px);
 
 .list li a{
 	padding-left: 10px;
+	display: block;
 }
 
 .list li a i{
